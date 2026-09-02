@@ -1,69 +1,46 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const offerings = [
+  { number: "01", title: "Guest rooms", copy: "Beds, bedside tables, seating and casegoods designed around your room story.", image: "/assets/a1c94549-02d6-4ad0-803b-be980a8de465.JPG", alt: "A refined hotel bedroom with a dark timber bed" },
+  { number: "02", title: "Restaurants", copy: "Distinctive dining environments made to welcome a full house, beautifully.", image: "/assets/932e872d-1af2-4fc1-b726-b0e7ecb91811.JPG", alt: "A warmly detailed restaurant dining space" },
+  { number: "03", title: "Public spaces", copy: "Lobby, lounge and banquet pieces built for the rhythm of real hospitality.", image: "/assets/84b97661-8244-4d5f-adb6-e672526fbf7a.JPG", alt: "Rows of elegant wood and upholstered chairs" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <header className="site-header">
+        <a className="brand" href="#top" aria-label="Muebles Casa home"><Image src="/assets/logo.JPG" alt="Muebles Casa" width={1300} height={1222} priority /><span>Muebles Casa</span></a>
+        <nav className="desktop-nav" aria-label="Primary navigation"><Link href="/indoor">Indoor</Link><Link href="/outdoor">Outdoor</Link><Link href="/projects">Projects</Link><Link href="/about">About</Link></nav>
+        <Link className="header-cta" href="/contact">Start a project <span>↗</span></Link>
+      </header>
+
+      <section className="hero" id="top">
+        <Image src="/assets/hero-hospitality-v2.png" alt="An elegant Muebles Casa hotel bedroom" fill priority sizes="100vw" className="hero-image" />
+        <div className="hero-overlay" />
+        <div className="hero-content shell">
+          <p className="eyebrow light">Muebles Casa / India</p>
+          <h1>Furniture<br /><em>for hotels & resorts.</em></h1>
+          <p className="hero-copy">Bespoke hospitality furniture for hotels, resorts and restaurants where every detail is part of the welcome.</p>
+          <div className="hero-actions"><a className="button button-ivory" href="#collections">Explore collections <span>↓</span></a><a className="text-link" href="#projects">Discuss your project <span>↗</span></a></div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        <div className="hero-footer shell"><span>Made for considered spaces</span><span className="hero-line" /><span>Hotels · Resorts · Restaurants</span></div>
+      </section>
+
+      <section className="intro shell" id="approach">
+        <p className="eyebrow">Built around your guest experience</p>
+        <div className="intro-grid"><h2>Every room has a feeling.<br />We make the furniture <em>belong to it.</em></h2><div className="intro-side"><p>From a one-off signature suite to a full property fit-out, Muebles Casa brings together considered design, material depth and dependable making for the hospitality world.</p><a className="arrow-link" href="#projects">How we work <span>→</span></a></div></div>
+      </section>
+
+      <section className="stats"><div className="shell stats-grid"><div><strong>Bespoke</strong><span>Made to your brief</span></div><div><strong>Hospitality</strong><span>Built for daily life</span></div><div><strong>End-to-end</strong><span>From concept to delivery</span></div><div><strong>India + beyond</strong><span>Projects without borders</span></div></div></section>
+
+      <section className="collections" id="collections">
+        <div className="shell collection-heading"><div><p className="eyebrow">Our hospitality collection</p><h2>Made for every<br /><em>moment of a stay.</em></h2></div><p>Furniture that looks composed on day one and feels right after a thousand welcomes.</p></div>
+        <div className="collection-grid shell">{offerings.map((offering) => <article className="collection-card" key={offering.number}><div className="card-image"><Image src={offering.image} alt={offering.alt} fill sizes="(max-width: 700px) 100vw, 33vw" /></div><div className="card-meta"><span>{offering.number}</span><span>Explore <b>↗</b></span></div><h3>{offering.title}</h3><p>{offering.copy}</p></article>)}</div>
+      </section>
+
+      <section className="feature" id="projects"><div className="feature-image"><Image src="/assets/2e07e079-03f0-4dca-9529-f13554afa2e4.JPG" alt="Handcrafted timber dining chairs and tables" fill sizes="(max-width: 850px) 100vw, 52vw" /></div><div className="feature-content"><p className="eyebrow light">Materials with a memory</p><h2>Designed with<br />the hand <em>in mind.</em></h2><p>Warm timber, tailored upholstery and honest construction. We create pieces that invite people to settle in—and stand up to the stories that follow.</p><a className="button button-outline" href="#top">View our capabilities <span>↗</span></a></div></section>
+    </main>
   );
 }
