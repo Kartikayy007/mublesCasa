@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Muebles Casa home"><Image src="/assets/logo.JPG" alt="Muebles Casa" width={1300} height={1222} priority /><span>Muebles Casa</span></a>
+        <a className="brand" href="#top" aria-label="Muebles Casa home"><Image src="/assets/logo.JPG" alt="Muebles Casa" width={1300} height={1222} priority /><span></span></a>
         <nav className="desktop-nav" aria-label="Primary navigation"><Link href="/indoor">Indoor</Link><Link href="/outdoor">Outdoor</Link><Link href="/projects">Projects</Link><Link href="/about">About</Link></nav>
         <Link className="header-cta" href="/contact">Start a project <span>↗</span></Link>
       </header>
