@@ -6,7 +6,7 @@ const display = Cormorant_Garamond({ variable: "--font-display", subsets: ["lati
 const sans = DM_Sans({ variable: "--font-sans", subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata: Metadata = {
-  title: "Muebles Casa | Hospitality Furniture",
+  title: "rbfurniture | Hospitality Furniture",
   description: "Bespoke furniture for hotels, resorts and restaurants.",
   icons: { icon: "/assets/logo.JPG", apple: "/assets/logo.JPG" },
 };
